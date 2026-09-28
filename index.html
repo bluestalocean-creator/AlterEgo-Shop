@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alter Ego Shop | دست‌سازه‌های خاص</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
+:root{
+  --cream:#f7efe5;
+  --cream2:#fffaf5;
+  --brown:#332a26;
+  --caramel:#a66a45;
+  --terracotta:#b85c45;
+  --burgundy:#7d3838;
+  --white:#ffffff;
+  --border:#eaded2;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:var(--white);
+  color:var(--brown);
+  font-family:'Vazirmatn',sans-serif;
+  line-height:1.8;
+}
+
+a{
+  text-decoration:none;
+  color:inherit;
+}
+
+button{
+  font-family:inherit;
+}
+
+.container{
+  width:min(1180px,92%);
+  margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid #f0e8e1;
+}
+
+.navbar{
+  height:82px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:25px;
+}
+
+.logo{
+  text-align:center;
+  direction:ltr;
+  min-width:190px;
+}
+
+.logo-main{
+  font-family:'DM Serif Display',serif;
+  font-size:29px;
+  letter-spacing:3px;
+  line-height:1;
+}
+
+.logo-sub{
+  font-size:10px;
+  letter-spacing:5px;
+  color:var(--caramel);
+  margin-top:4px;
+}
+
+.nav-links{
+  display:flex;
+  gap:28px;
+  align-items:center;
+  font-size:14px;
+}
+
+.nav-links a{
+  transition:.25s;
+}
+
+.nav-links a:hover{
+  color:var(--terracotta);
+}
+
+.nav-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.search{
+  width:190px;
+  height:38px;
+  border:1px solid var(--border);
+  border-radius:30px;
+  padding:0 15px;
+  outline:none;
+  background:#fff;
+  font-family:inherit;
+}
+
+.cart-btn{
+  position:relative;
+  border:0;
+  background:var(--cream);
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:18px;
+}
+
+.cart-count{
+  position:absolute;
+  top:-3px;
+  left:-2px;
+  background:var(--terracotta);
+  color:white;
+  width:19px;
+  height:19px;
+  border-radius:50%;
+  font-size:11px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+  min-height:530px;
+  background:linear-gradient(110deg,#f8eee4,#fffaf6);
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  overflow:hidden;
+}
+
+.hero-image{
+  min-height:530px;
+  background:
+    linear-gradient(rgba(120,75,50,.08),rgba(120,75,50,.08)),
+    url('https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=1200&q=85')
+    center/cover;
+  position:relative;
+}
+
+.hero-image::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(90deg,transparent 70%,rgba(247,239,229,.75));
+}
+
+.hero-content{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:60px 8%;
+  direction:rtl;
+}
+
+.eyebrow{
+  color:var(--terracotta);
+  font-size:13px;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+.hero h1{
+  font-family:'DM Serif Display',serif;
+  font-size:48px;
+  line-height:1.2;
+  direction:ltr;
+  text-align:left;
+  max-width:500px;
+}
+
+.hero p{
+  margin:22px 0 28px;
+  font-size:16px;
+  color:#665951;
+  max-width:480px;
+}
+
+.primary-btn{
+  width:max-content;
+  background:var(--terracotta);
+  color:#fff;
+  border:0;
+  border-radius:30px;
+  padding:13px 27px;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.primary-btn:hover{
+  background:var(--burgundy);
+  transform:translateY(-2px);
+}
+
+/* ================= SECTION ================= */
+
+.section{
+  padding:80px 0;
+}
+
+.section-title{
+  text-align:center;
+  margin-bottom:45px;
+}
+
+.section-title h2{
+  font-family:'DM Serif Display',serif;
+  font-size:38px;
+  direction:ltr;
+}
+
+.section-title p{
+  color:var(--terracotta);
+  font-size:14px;
+}
+
+/* ================= CATEGORIES ================= */
+
+.categories{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:20px;
+}
+
+.category{
+  text-align:center;
+  cursor:pointer;
+  transition:.25s;
+}
+
+.category:hover{
+  transform:translateY(-6px);
+}
+
+.category-image{
+  width:145px;
+  height:145px;
+  max-width:100%;
+  margin:auto;
+  border-radius:50%;
+  background:var(--cream);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:54px;
+  border:5px solid #fff;
+  box-shadow:0 8px 25px rgba(80,50,30,.08);
+}
+
+.category h3{
+  margin-top:13px;
+  font-size:15px;
+  direction:ltr;
+}
+
+.category p{
+  color:#8a7569;
+  font-size:12px;
+}
+
+/* ================= FAMILY SECTION ================= */
+
+.family{
+  background:var(--cream);
+  border-radius:28px;
+  overflow:hidden;
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  align-items:stretch;
+}
+
+.family-image{
+  min-height:390px;
+  background:
+    url('https://images.unsplash.com/photo-1604079628040-94301bb21b91?auto=format&fit=crop&w=1000&q=85')
+    center/cover;
+}
+
+.family-content{
+  padding:60px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.family-content h2{
+  font-family:'DM Serif Display',serif;
+  font-size:37px;
+  direction:ltr;
+  line-height:1.25;
+}
+
+.family-content p{
+  margin:20px 0 25px;
+  color:#685a52;
+}
+
+/* ================= PRODUCTS ================= */
+
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+}
+
+.product{
+  background:#fff;
+  border:1px solid #eee3da;
+  border-radius:18px;
+  overflow:hidden;
+  transition:.25s;
+  position:relative;
+}
+
+.product:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(80,50,30,.10);
+}
+
+.product-image{
+  height:250px;
+  background:var(--cream);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:90px;
+}
+
+.product-info{
+  padding:17px;
+}
+
+.product-info h3{
+  font-size:15px;
+  margin-bottom:4px;
+}
+
+.product-info small{
+  color:#8a7569;
+}
+
+.price-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:13px;
+}
+
+.price{
+  color:var(--terracotta);
+  font-weight:700;
+}
+
+.add-btn{
+  width:39px;
+  height:39px;
+  border-radius:50%;
+  border:0;
+  background:var(--terracotta);
+  color:#fff;
+  cursor:pointer;
+  font-size:17px;
+}
+
+.favorite{
+  position:absolute;
+  top:12px;
+  left:12px;
+  width:35px;
+  height:35px;
+  border-radius:50%;
+  border:0;
+  background:#fff;
+  box-shadow:0 3px 10px #0001;
+  cursor:pointer;
+  font-size:17px;
+}
+
+/* ================= FEATURES ================= */
+
+.features{
+  background:var(--cream);
+  border-radius:25px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  padding:28px;
+  gap:20px;
+}
+
+.feature{
+  text-align:center;
+  border-left:1px solid #dfd1c5;
+}
+
+.feature:last-child{
+  border-left:0;
+}
+
+.feature-icon{
+  font-size:30px;
+  margin-bottom:5px;
+}
+
+.feature h3{
+  font-size:14px;
+}
+
+.feature p{
+  font-size:11px;
+  color:#8a7569;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+  margin-top:70px;
+  background:#332a26;
+  color:#fff;
+  padding:65px 0 25px;
+}
+
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1.5fr;
+  gap:45px;
+}
+
+.footer-logo{
+  font-family:'DM Serif Display',serif;
+  font-size:30px;
+  letter-spacing:3px;
+  direction:ltr;
+}
+
+.footer-brand p{
+  color:#cbbcb2;
+  margin-top:15px;
+  font-size:13px;
+}
+
+.footer-column h3{
+  color:#fff;
+  margin-bottom:15px;
+  font-size:15px;
+}
+
+.footer-column a{
+  display:block;
+  color:#cbbcb2;
+  font-size:13px;
+  margin:7px 0;
+}
+
+.footer-column a:hover{
+  color:#fff;
+}
+
+.newsletter{
+  display:flex;
+  margin-top:15px;
+}
+
+.newsletter input{
+  flex:1;
+  border:0;
+  padding:11px 13px;
+  border-radius:0 25px 25px 0;
+  outline:none;
+}
+
+.newsletter button{
+  width:50px;
+  border:0;
+  background:var(--terracotta);
+  color:#fff;
+  border-radius:25px 0 0 25px;
+  cursor:pointer;
+}
+
+.copyright{
+  border-top:1px solid #594c45;
+  margin-top:45px;
+  padding-top:20px;
+  text-align:center;
+  color:#aa9b91;
+  font-size:11px;
+  direction:ltr;
+}
+
+/* ================= CART ================= */
+
+.cart-overlay{
+  position:fixed;
+  inset:0;
+  background:#0007;
+  z-index:2000;
+  display:none;
+}
+
+.cart-overlay.active{
+  display:block;
+}
+
+.cart-panel{
+  position:absolute;
+  top:0;
+  left:0;
+  width:min(420px,100%);
+  height:100%;
+  background:#fff;
+  padding:25px;
+  overflow-y:auto;
+  direction:rtl;
+}
+
+.cart-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding-bottom:20px;
+  border-bottom:1px solid var(--border);
+}
+
+.close-cart{
+  border:0;
+  background:var(--cream);
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  cursor:pointer;
+}
+
+.cart-item{
+  display:flex;
+  gap:13px;
+  padding:18px 0;
+  border-bottom:1px solid #eee;
+  align-items:center;
+}
+
+.cart-item-image{
+  width:65px;
+  height:65px;
+  background:var(--cream);
+  border-radius:12px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:30px;
+}
+
+.cart-item-info{
+  flex:1;
+}
+
+.cart-item-info h4{
+  font-size:13px;
+}
+
+.cart-item-info p{
+  color:var(--terracotta);
+  font-size:12px;
+}
+
+.remove-item{
+  border:0;
+  background:none;
+  color:#999;
+  cursor:pointer;
+}
+
+.cart-total{
+  margin-top:25px;
+  padding-top:20px;
+  border-top:2px solid var(--brown);
+  display:flex;
+  justify-content:space-between;
+  font-weight:700;
+}
+
+.checkout{
+  width:100%;
+  margin-top:20px;
+  padding:14px;
+  border:0;
+  border-radius:30px;
+  background:var(--terracotta);
+  color:#fff;
+  cursor:pointer;
+}
+
+.empty-cart{
+  text-align:center;
+  padding:60px 10px;
+  color:#99877b;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+  .nav-links{
+    display:none;
+  }
+
+  .search{
+    display:none;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+  }
+
+  .hero-image{
+    min-height:350px;
+    order:1;
+  }
+
+  .hero-content{
+    order:2;
+    padding:45px 7%;
+  }
+
+  .hero h1{
+    font-size:38px;
+  }
+
+  .categories{
+    grid-template-columns:repeat(3,1fr);
+    gap:25px 10px;
+  }
+
+  .family{
+    grid-template-columns:1fr;
+  }
+
+  .family-image{
+    min-height:280px;
+  }
+
+  .family-content{
+    padding:40px 25px;
+  }
+
+  .products{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .features{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .feature{
+    border-left:0;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+
+@media(max-width:520px){
+
+  .navbar{
+    height:70px;
+  }
+
+  .logo-main{
+    font-size:22px;
+  }
+
+  .logo-sub{
+    font-size:8px;
+  }
+
+  .categories{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .category-image{
+    width:115px;
+    height:115px;
+  }
+
+  .products{
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+  }
+
+  .product-image{
+    height:180px;
+    font-size:65px;
+  }
+
+  .product-info{
+    padding:12px;
+  }
+
+  .product-info h3{
+    font-size:12px;
+  }
+
+  .price{
+    font-size:12px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+  }
+
+  .section{
+    padding:55px 0;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <div class="container navbar">
+
+    <div class="nav-actions">
+      <input class="search" type="search" placeholder="جستجوی محصولات...">
+
+      <button class="cart-btn" onclick="openCart()" aria-label="سبد خرید">
+        🛒
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+
+    <div class="logo">
+      <div class="logo-main">ALTER EGO</div>
+      <div class="logo-sub">SHOP</div>
+    </div>
+
+    <nav class="nav-links">
+      <a href="#">خانه</a>
+      <a href="#shop">فروشگاه</a>
+      <a href="#categories">دسته‌بندی‌ها</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس</a>
+    </nav>
+
+  </div>
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-image"></div>
+
+  <div class="hero-content">
+
+    <div class="eyebrow">ALTER EGO HANDMADE</div>
+
+    <h1>Handmade things,<br>made with meaning.</h1>
+
+    <p>
+      دست‌سازه‌هایی که با عشق ساخته می‌شوند؛
+      از گل‌های ظریف و بافتنی‌های دوست‌داشتنی
+      تا صنایع دستی خاص و دکورهای دست‌ساز.
+    </p>
+
+    <a href="#shop" class="primary-btn">
+      مشاهده محصولات ←
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- CATEGORIES -->
+
+<section class="section" id="categories">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Explore Our Collections</h2>
+      <p>دسته‌بندی‌های فروشگاه</p>
+    </div>
+
+    <div class="categories">
+
+      <div class="category" onclick="filterProducts('flower')">
+        <div class="category-image">💐</div>
+        <h3>Flower & Bouquets</h3>
+        <p>گل و دسته‌گل دست‌ساز</p>
+      </div>
+
+      <div class="category" onclick="filterProducts('knit')">
+        <div class="category-image">🧶</div>
+        <h3>Knitted & Crochet</h3>
+        <p>بافتنی و قلاب‌بافی</p>
+      </div>
+
+      <div class="category" onclick="filterProducts('pipe')">
+        <div class="category-image">🌷</div>
+        <h3>Pipe Cleaner Crafts</h3>
+        <p>دست‌سازه‌های پیپ‌پاکنی</p>
+      </div>
+
+      <div class="category" onclick="filterProducts('craft')">
+        <div class="category-image">🪵</div>
+        <h3>Handcrafted Goods</h3>
+        <p>صنایع دستی</p>
+      </div>
+
+      <div class="category" onclick="filterProducts('decor')">
+        <div class="category-image">🏠</div>
+        <h3>Home Décor</h3>
+        <p>دکوراسیون و وسایل تزئینی</p>
+      </div>
+
+      <div class="category" onclick="filterProducts('gift')">
+        <div class="category-image">🎁</div>
+        <h3>Gifts</h3>
+        <p>هدیه و گیفت</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FAMILY WORKSHOP -->
+
+<section class="section" id="about">
+
+  <div class="container">
+
+    <div class="family">
+
+      <div class="family-image"></div>
+
+      <div class="family-content">
+
+        <div class="eyebrow">FROM OUR FAMILY WORKSHOP</div>
+
+        <h2>
+          Handcrafted pieces made with
+          patience, skill and tradition.
+        </h2>
+
+        <p>
+          بخشی از محصولات Alter Ego در کارگاه خانوادگی ما
+          ساخته می‌شوند؛ جایی که تجربه، خلاقیت و عشق به هنر
+          کنار هم قرار می‌گیرند.
+        </p>
+
+        <a href="#shop" class="primary-btn">
+          مشاهده محصولات ←
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section class="section" id="shop">
+
+  <div class="container">
+
+    <div class="section-title">
+      <h2>New Arrivals</h2>
+      <p>جدیدترین محصولات</p>
+    </div>
+
+    <div class="products" id="products">
+
+      <!-- PRODUCT 1 -->
+
+      <article class="product" data-category="flower">
+
+        <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+        <div class="product-image">💐</div>
+
+        <div class="product-info">
+
+          <h3>Handmade Lily Bouquet</h3>
+
+          <small>دسته‌گل لیلیوم دست‌ساز</small>
+
+          <div class="price-row">
+
+            <span class="price">۴۳۰,۰۰۰ تومان</span>
+
+            <button class="add-btn"
+              onclick="addToCart('دسته‌گل لیلیوم دست‌ساز','۴۳۰,۰۰۰ تومان','💐')">
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCT 2 -->
+
+      <article class="product" data-category="knit">
+
+        <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+        <div class="product-image">🧸</div>
+
+        <div class="product-info">
+
+          <h3>Crochet Bear</h3>
+
+          <small>خرس بافتنی</small>
+
+          <div class="price-row">
+
+            <span class="price">۲۸۰,۰۰۰ تومان</span>
+
+            <button class="add-btn"
+              onclick="addToCart('خرس بافتنی','۲۸۰,۰۰۰ تومان','🧸')">
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCT 3 -->
+
+      <article class="product" data-category="pipe">
+
+        <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+        <div class="product-image">🌷</div>
+
+        <div class="product-info">
+
+          <h3>Pipe Cleaner Tulips</h3>
+
+          <small>گل لاله پیپ‌پاکنی</small>
+
+          <div class="price-row">
+
+            <span class="price">۱۲۰,۰۰۰ تومان</span>
+
+            <button class="add-btn"
+              onclick="addToCart('گل لاله پیپ‌پاکنی','۱۲۰,۰۰۰ تومان','🌷')">
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCT 4 -->
+
+      <article class="product" data-category="craft">
+
+        <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+        <div class="product-image">🪵</div>
+
+        <div class="product-info">
+
+          <h3>Handmade Wooden Box</h3>
+
+          <small>جعبه دست‌ساز چوبی</small>
+
+          <div class="price-row">
+
+            <span class="price">۶۲۰,۰۰۰ تومان</span>
+
+            <button class="add-btn"
+              onclick="addToCart('جعبه دست‌ساز چوبی','۶۲۰,۰۰۰ تومان','🪵')">
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCT 5 -->
+
+      <article class="product" data-category="decor">
+
+        <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+        <div class="product-image">🪴</div>
+
+        <div class="product-info">
+
+          <h3>Handmade Home Decor</h3>
+
+          <small>دکور دست‌ساز</small>
+
+          <div class="price-row">
+
+            <span class="price">۳۵۰,۰۰۰ تومان</span>
+
+            <button class="add-btn"
+              onclick="addToCart('دکور دست‌ساز','۳۵۰,۰۰۰ تومان','🪴')">
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+
+      <!-- PRODUCT 6 -->
+
+      <article class="product" data-category="gift">
+
+        <button class="favorite" onclick="toggleFavorite(this)">♡</button>
+
+        <div class="product-image">🎁</div>
+
+        <div class="product-info">
+
+          <h3>Handmade Gift Box</h3>
+
+          <small>باکس هدیه دست‌ساز</small>
+
+          <div class="price-row">
+
+            <span class="price">۴۸۰,۰۰۰ تومان</span>
+
+            <button class="add-btn"
+              onclick="addToCart('باکس هدیه دست‌ساز','۴۸۰,۰۰۰ تومان','🎁')">
+              +
+            </button>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FEATURES -->
+
+<section class="section">
+
+  <div class="container">
+
+    <div class="features">
+
+      <div class="feature">
+        <div class="feature-icon">♡</div>
+        <h3>Handmade with Love</h3>
+        <p>ساخته‌شده با عشق</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">♧</div>
+        <h3>Unique Pieces</h3>
+        <p>هر محصول خاص و متفاوت</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">♢</div>
+        <h3>Secure Shopping</h3>
+        <p>خرید امن</p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">☏</div>
+        <h3>Customer Support</h3>
+        <p>پشتیبانی مشتریان</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+  <div class="container">
+
+    <div class="footer-grid">
+
+      <div class="footer-brand">
+
+        <div class="footer-logo">ALTER EGO</div>
+
+        <p>
+          Handmade • Crafted • Yours
+        </p>
+
+        <p>
+          فروشگاهی برای دست‌سازه‌های خاص،
+          هدیه‌ها و هنرهای دست‌ساز.
+        </p>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Shop</h3>
+
+        <a href="#shop">همه محصولات</a>
+        <a href="#categories">دسته‌بندی‌ها</a>
+        <a href="#shop">محصولات جدید</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Information</h3>
+
+        <a href="#about">درباره ما</a>
+        <a href="#contact">تماس با ما</a>
+        <a href="#">قوانین فروشگاه</a>
+        <a href="#">سوالات متداول</a>
+
+      </div>
+
+
+      <div class="footer-column">
+
+        <h3>Stay With Us</h3>
+
+        <p style="color:#cbbcb2;font-size:13px">
+          برای دریافت خبر محصولات جدید عضو شوید.
+        </p>
+
+        <div class="newsletter">
+
+          <input type="email" placeholder="ایمیل شما">
+
+          <button onclick="subscribe()">←</button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="copyright">
+      © 2026 Alter Ego Shop. All rights reserved.
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- CART -->
+
+<div class="cart-overlay" id="cartOverlay" onclick="closeCartOutside(event)">
+
+  <div class="cart-panel">
+
+    <div class="cart-header">
+
+      <h2>سبد خرید</h2>
+
+      <button class="close-cart" onclick="closeCart()">×</button>
+
+    </div>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+
+      <span>مجموع</span>
+
+      <span id="cartTotal">۰ تومان</span>
+
+    </div>
+
+    <button class="checkout" onclick="checkout()">
+      ادامه ثبت سفارش
+    </button>
+
+  </div>
+
+</div>
+
+
+<script>
+
+let cart = [];
+
+function addToCart(name, price, icon){
+
+  cart.push({
+    name:name,
+    price:price,
+    icon:icon
+  });
+
+  updateCart();
+
+  alert('محصول به سبد خرید اضافه شد 🛍️');
+}
+
+
+function updateCart(){
+
+  document.getElementById('cartCount').textContent = cart.length;
+
+  const container = document.getElementById('cartItems');
+
+  if(cart.length === 0){
+
+    container.innerHTML =
+      '<div class="empty-cart">سبد خریدت هنوز خالیه 🛍️</div>';
+
+    document.getElementById('cartTotal').textContent = '۰ تومان';
+
+    return;
+  }
+
+  let html = '';
+
+  cart.forEach((item,index)=>{
+
+    html += `
+      <div class="cart-item">
+
+        <div class="cart-item-image">
+          ${item.icon}
+        </div>
+
+        <div class="cart-item-info">
+          <h4>${item.name}</h4>
+          <p>${item.price}</p>
+        </div>
+
+        <button
+          class="remove-item"
+          onclick="removeFromCart(${index})">
+          حذف
+        </button>
+
+      </div>
+    `;
+
+  });
+
+  container.innerHTML = html;
+
+  document.getElementById('cartTotal').textContent =
+    cart.length + ' محصول';
+
+}
+
+
+function removeFromCart(index){
+
+  cart.splice(index,1);
+
+  updateCart();
+
+}
+
+
+function openCart(){
+
+  document.getElementById('cartOverlay').classList.add('active');
+
+}
+
+
+function closeCart(){
+
+  document.getElementById('cartOverlay').classList.remove('active');
+
+}
+
+
+function closeCartOutside(event){
+
+  if(event.target === document.getElementById('cartOverlay')){
+
+    closeCart();
+
+  }
+
+}
+
+
+function toggleFavorite(button){
+
+  if(button.textContent === '♡'){
+
+    button.textContent = '♥';
+    button.style.color = '#b85c45';
+
+  }else{
+
+    button.textContent = '♡';
+    button.style.color = '';
+
+  }
+
+}
+
+
+function filterProducts(category){
+
+  document.getElementById('shop').scrollIntoView({
+    behavior:'smooth'
+  });
+
+  const products =
+    document.querySelectorAll('.product');
+
+  products.forEach(product=>{
+
+    if(product.dataset.category === category){
+
+      product.style.display = '';
+
+    }else{
+
+      product.style.display = 'none';
+
+    }
+
+  });
+
+}
+
+
+function subscribe(){
+
+  alert('ممنون که به Alter Ego پیوستی ♡');
+
+}
+
+
+function checkout(){
+
+  if(cart.length === 0){
+
+    alert('سبد خرید خالی است.');
+
+    return;
+
+  }
+
+  alert(
+    'این بخش در نسخه بعدی به فرم ثبت سفارش و پرداخت متصل می‌شود.'
+  );
+
+}
+
+updateCart();
+
+</script>
+
+</body>
+</html>
